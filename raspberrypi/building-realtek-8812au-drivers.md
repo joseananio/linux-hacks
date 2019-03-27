@@ -8,15 +8,18 @@
 
 ======================
 
-NOTE: Possible pre inistall files: 
+NOTE: Possible pre install files: 
 ```
 sudo apt install build-essentials bc raspberrypi-kernel-headers vim
 ```
+You may replace vim with your text-editor.
+
+
+Taken from second answer on https://raspberrypi.stackexchange.com/questions/64502/install-drivers-for-rtl8812au-wireless-usb-adapter
+
 <br>
 
 ### Building 8812AU wifi drivers
-
-Taken from second answer on https://raspberrypi.stackexchange.com/questions/64502/install-drivers-for-rtl8812au-wireless-usb-adapter
 
 ========================================
 
@@ -45,4 +48,5 @@ Taken from second answer on https://raspberrypi.stackexchange.com/questions/6450
     modprobe 8812au
     ```
 
-NOTE: You can try this other method: https://www.max2play.com/en/forums/topic/howto-raspberry-pi-3-realtek-802-11ac-rtl8812au/
+**NOTE**: 
+You can try this other method if this doesn't work for you: https://www.max2play.com/en/forums/topic/howto-raspberry-pi-3-realtek-802-11ac-rtl8812au/

@@ -1,14 +1,19 @@
-### Initial System Setup
+### Initial system setup
 
-1: These steps use fresh install of Raspbian Stretch Lite
-2: Update and upgrade
+1. These steps use fresh install of Raspbian Stretch Lite
+2. Update and upgrade
+    ```sh
     sudo apt-get update
     sudo apt-get dist-upgrade
-3. Try the upgrade a second time
+    ```
+3. Try `dist-upgrade` a second time
 
+**NOTE**: 
 If you need to build 8812au drivers first, see [Building realtek 8812 drivers](https://github.com/joseananio/linux-hacks/tree/master/raspberrypi/building-realtek-8812audrivers.md).
 
-### Setting Up Bridge-like Link Between eth0 and wlan0
+<br>
+
+### Setting up bridge-like link between eth0 and wlan0
 
 The aim is to setup a bridge between the our wireless adapter and the ethernet port. The wifi adapter connects to a wifi. We want to share that connection with the ethernet port. We can then setup another network on the ethernet port.
 
@@ -135,6 +140,7 @@ If networking.service complains of `/var/run/wpa_supplicant/wlan0`
 remove /var/run/wpa_supplicant/wlan0 
 
 #### Fix dnsmasq restart failures on boot
+
 dnsmasq may fail to start. This means the local network connection will not work. here is a quick fix
 Set up autologin and execute a command in `~/.bashrc`
 You can use other autostart methods that execute after dnsmasq has failed.
